@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/duck"/>
+        android:src="@drawable/duck"
+        android:contentDescription="@string/duck" />
 
 
     <LinearLayout
@@ -21,6 +22,15 @@
         android:layout_gravity="bottom|end"
         android:gravity="end"
         android:padding="16dp">
+
+        <Switch
+            android:id="@+id/switch_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="@string/on"
+            android:textOff="@string/off"
+            android:onClick="onSwitchClicked"/>
+
 
 
         <ToggleButton
@@ -38,13 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="It's a Duck!"/>
+        android:text="@string/it_s_a_duck"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="(not a real one)"/>
+        android:text="@string/not_a_real_one"/>
 
     </LinearLayout>
 

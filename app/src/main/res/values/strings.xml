@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Duck</string>
+    <string name="on" />
+    <string name="off" />
+    <string name="it_s_a_duck">It\'s a Duck!</string>
+    <string name="not_a_real_one">(not a real one)</string>
+    <string name="duck">Duck</string>
 </resources>
