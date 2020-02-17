@@ -21,16 +21,18 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
      this.mInflater = LayoutInflater.from(context);
      this.mData = data;
     }
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = mInflater.inflate(R.layout.recycleview_row,parent,false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
         String animal = mData.get(position);
         holder.myTextView.setText(animal);
+    }
+    @Override
+    public int getItemCount(){
+        return mData.size();
     }
 }
