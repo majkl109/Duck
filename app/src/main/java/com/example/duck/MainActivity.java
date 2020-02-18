@@ -11,12 +11,25 @@ import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.ToggleButton;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity implements MyRecycleViewAdapter.ItemClickListener{
+
+    MyRecycleViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ArrayList<String> animalNames = new ArrayList<>();
+        animalNames.add("Horse");
+        animalNames.add("Cow");
+        animalNames.add("Camel");
+        animalNames.add("Sheep");
+        animalNames.add("Goat");
+        animalNames.add("Cat");
+
     }
     CheckBox checkbox = findViewById(R.id.checkbox_yellow);
     boolean checked = checkbox.isChecked();
