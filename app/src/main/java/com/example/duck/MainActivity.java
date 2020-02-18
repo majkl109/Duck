@@ -2,6 +2,8 @@ package com.example.duck;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.ShowableListMenu;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.Display;
@@ -29,6 +31,12 @@ public class MainActivity extends AppCompatActivity implements MyRecycleViewAdap
         animalNames.add("Sheep");
         animalNames.add("Goat");
         animalNames.add("Cat");
+
+        RecyclerView recyclerView = findViewById(R.id.rvAnimals);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new MyRecycleViewAdapter(this, animalNames);
+        adapter.setClickListener(this);
+        recyclerView.setAdapter();
 
     }
     CheckBox checkbox = findViewById(R.id.checkbox_yellow);
