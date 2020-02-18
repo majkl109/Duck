@@ -46,6 +46,15 @@ public class MyRecycleViewAdapter extends RecyclerView.Adapter<MyRecycleViewAdap
         public void onClick(View view){
             if(mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
         }
-
     }
+    String getItem(int id){
+        return mData.get(id);
+    }
+
+    void setClickListener(ItemClickListener itemClickListener){
+        this.mClickListener = itemClickListener;
+    }
+
+    public
+
 }
